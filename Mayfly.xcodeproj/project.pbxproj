@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55383A171983741E0062F677 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55383A161983741E0062F677 /* EventViewController.swift */; };
+		55383A19198375A80062F677 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55383A18198375A80062F677 /* FriendsViewController.swift */; };
+		55383A1B19837ABA0062F677 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55383A1A19837ABA0062F677 /* EventModel.swift */; };
+		55383A1D19837AE00062F677 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55383A1C19837AE00062F677 /* FriendModel.swift */; };
+		55383A1F1984CCB80062F677 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55383A1E1984CCB80062F677 /* NotificationsViewController.swift */; };
+		55D4455F197C6FE500DB504B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4455E197C6FE500DB504B /* LoginViewController.swift */; };
 		55E070A0197B7D8B000C46EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E0709F197B7D8B000C46EC /* AppDelegate.swift */; };
 		55E070A2197B7D8B000C46EC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E070A1197B7D8B000C46EC /* FirstViewController.swift */; };
 		55E070A4197B7D8B000C46EC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E070A3197B7D8B000C46EC /* SecondViewController.swift */; };
 		55E070A7197B7D8B000C46EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55E070A5197B7D8B000C46EC /* Main.storyboard */; };
 		55E070A9197B7D8B000C46EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55E070A8197B7D8B000C46EC /* Images.xcassets */; };
 		55E070B5197B7D8B000C46EC /* MayflyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E070B4197B7D8B000C46EC /* MayflyTests.swift */; };
+		55E070BF197C6A0E000C46EC /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E070BE197C6A0E000C46EC /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55383A161983741E0062F677 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		55383A18198375A80062F677 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		55383A1A19837ABA0062F677 /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		55383A1C19837AE00062F677 /* FriendModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
+		55383A1E1984CCB80062F677 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		55D4455E197C6FE500DB504B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		55E0709A197B7D8B000C46EC /* Mayfly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mayfly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E0709E197B7D8B000C46EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55E0709F197B7D8B000C46EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +49,7 @@
 		55E070AE197B7D8B000C46EC /* MayflyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MayflyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E070B3197B7D8B000C46EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55E070B4197B7D8B000C46EC /* MayflyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MayflyTests.swift; sourceTree = "<group>"; };
+		55E070BE197C6A0E000C46EC /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55383A14198373D70062F677 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				55E070A3197B7D8B000C46EC /* SecondViewController.swift */,
+				55E070BE197C6A0E000C46EC /* ThirdViewController.swift */,
+				55E070A1197B7D8B000C46EC /* FirstViewController.swift */,
+				55D4455E197C6FE500DB504B /* LoginViewController.swift */,
+				55383A161983741E0062F677 /* EventViewController.swift */,
+				55383A18198375A80062F677 /* FriendsViewController.swift */,
+				55383A1E1984CCB80062F677 /* NotificationsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		55383A15198373F80062F677 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				55383A1A19837ABA0062F677 /* EventModel.swift */,
+				55383A1C19837AE00062F677 /* FriendModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		55E07091197B7D8B000C46EC = {
 			isa = PBXGroup;
 			children = (
@@ -77,9 +114,9 @@
 		55E0709C197B7D8B000C46EC /* Mayfly */ = {
 			isa = PBXGroup;
 			children = (
+				55383A15198373F80062F677 /* Models */,
+				55383A14198373D70062F677 /* Controllers */,
 				55E0709F197B7D8B000C46EC /* AppDelegate.swift */,
-				55E070A1197B7D8B000C46EC /* FirstViewController.swift */,
-				55E070A3197B7D8B000C46EC /* SecondViewController.swift */,
 				55E070A5197B7D8B000C46EC /* Main.storyboard */,
 				55E070A8197B7D8B000C46EC /* Images.xcassets */,
 				55E0709D197B7D8B000C46EC /* Supporting Files */,
@@ -213,7 +250,14 @@
 			files = (
 				55E070A4197B7D8B000C46EC /* SecondViewController.swift in Sources */,
 				55E070A0197B7D8B000C46EC /* AppDelegate.swift in Sources */,
+				55E070BF197C6A0E000C46EC /* ThirdViewController.swift in Sources */,
+				55D4455F197C6FE500DB504B /* LoginViewController.swift in Sources */,
+				55383A1D19837AE00062F677 /* FriendModel.swift in Sources */,
+				55383A1F1984CCB80062F677 /* NotificationsViewController.swift in Sources */,
+				55383A19198375A80062F677 /* FriendsViewController.swift in Sources */,
 				55E070A2197B7D8B000C46EC /* FirstViewController.swift in Sources */,
+				55383A1B19837ABA0062F677 /* EventModel.swift in Sources */,
+				55383A171983741E0062F677 /* EventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,8 +376,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Mayfly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -343,8 +389,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Mayfly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -401,6 +449,7 @@
 				55E070BA197B7D8B000C46EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55E070BB197B7D8B000C46EC /* Build configuration list for PBXNativeTarget "MayflyTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +458,7 @@
 				55E070BD197B7D8B000C46EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
