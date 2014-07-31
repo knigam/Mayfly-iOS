@@ -73,9 +73,9 @@
 		55383A14198373D70062F677 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				55E070A1197B7D8B000C46EC /* FirstViewController.swift */,
 				55E070A3197B7D8B000C46EC /* SecondViewController.swift */,
 				55E070BE197C6A0E000C46EC /* ThirdViewController.swift */,
-				55E070A1197B7D8B000C46EC /* FirstViewController.swift */,
 				55D4455E197C6FE500DB504B /* LoginViewController.swift */,
 				55383A161983741E0062F677 /* EventViewController.swift */,
 				55383A18198375A80062F677 /* FriendsViewController.swift */,

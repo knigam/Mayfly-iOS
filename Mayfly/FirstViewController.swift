@@ -21,5 +21,12 @@ class FirstViewController: NotificationsViewController, UITableViewDataSource, U
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject) {
+        var eventViewController: EventViewController = segue.destinationViewController as EventViewController
+        var eventIndex = eventTableView!.indexPathForSelectedRow().row
+        var selectedEvent = self.notifications[eventIndex]
+        eventViewController.event = selectedEvent
+    }
 }
 

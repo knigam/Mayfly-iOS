@@ -25,12 +25,6 @@ class NotificationsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func onEventClick(sender: AnyObject) {
-        let eventController = self.storyboard.instantiateViewControllerWithIdentifier("eventController") as EventViewController
-        eventController.event = notifications[0]
-        self.presentViewController(eventController, animated: true, completion: nil)
-    }
-    
     func tableView(tableView: UITableView!, numberOfRowsInSection section:    Int) -> Int {
         return notifications.count
     }
@@ -44,11 +38,11 @@ class NotificationsViewController: UIViewController {
         return cell
     }
     
-    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {        
-        let eventController = self.storyboard.instantiateViewControllerWithIdentifier("eventController") as EventViewController
-        eventController.event = notifications[indexPath.row]
-        self.presentViewController(eventController, animated: true, completion: nil)
-    }
+//    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+//        let eventController = self.storyboard.instantiateViewControllerWithIdentifier("EventViewController") as EventViewController
+//        eventController.event = notifications[indexPath.row]
+//        self.presentViewController(eventController, animated: true, completion: nil)
+//    }
     
     //Use this method to get the events from the JSON and create event models for the notifications array
     func populateNotifications() {

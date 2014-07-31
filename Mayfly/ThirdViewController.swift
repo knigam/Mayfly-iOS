@@ -22,6 +22,13 @@ class ThirdViewController: NotificationsViewController, UITableViewDataSource, U
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject) {
+        var eventViewController: EventViewController = segue.destinationViewController as EventViewController
+        var eventIndex = eventTableView!.indexPathForSelectedRow().row
+        var selectedEvent = self.notifications[eventIndex]
+        eventViewController.event = selectedEvent
+    }
+    
     override func populateNotifications() {
         if notifications.isEmpty{
             for i in Range(start: 0, end: 5) {
