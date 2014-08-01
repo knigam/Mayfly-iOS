@@ -35,6 +35,7 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    //button listener to change between signing in and signing up
     @IBAction func toggleNewAccountBtn(sender: AnyObject) {
         createNewAccount = !createNewAccount
         
@@ -60,8 +61,58 @@ class LoginViewController: UIViewController {
         }
     }
     
+    
+    //This is the button listener that either logs the user in or creates an account
     @IBAction func loginBtnOnClick(sender: AnyObject) {
-        let tabBarController = self.storyboard.instantiateViewControllerWithIdentifier("tabBarController") as UIViewController
-        self.presentViewController(tabBarController, animated: true, completion: nil)
+        if validateLabels(){
+            let tabBarController = self.storyboard.instantiateViewControllerWithIdentifier("tabBarController") as UIViewController
+            self.presentViewController(tabBarController, animated: true, completion: nil)
+        }
+    }
+    
+    
+    func validateLabels() -> Bool{
+        var cont: Bool = true
+        var error:String = ""
+        let username: String = self.usernameTextField.text
+        let password: String = self.passwordTextField.text
+        
+        if createNewAccount {
+            let passwordConfirmation = self.passwordConfirmationTextField.text
+            let name = self.nameTextField.text
+            
+            if name.isEmpty {
+                cont = false
+                error = "please enter your name"
+            }
+            
+            if passwordConfirmation.isEmpty {
+                cont = false
+                error = "please confirm your password"
+            }
+            if (password != passwordConfirmation) {
+                cont = false
+                error = "confirmation does not match password"
+            }
+        }
+    
+        if (countElements(password) < 8) {
+            cont = false
+            error = "password must be at least 8 characters"
+        }
+    
+        if !username.rangeOfString("@") {
+            cont = false
+            error = "please enter a valid email address"
+        }
+    
+        if !cont {
+            var alert: UIAlertView = UIAlertView()
+            alert.title = "Login error"
+            alert.message = error
+            alert.addButtonWithTitle("Ok")
+            alert.show()
+        }
+        return cont
     }
 }
