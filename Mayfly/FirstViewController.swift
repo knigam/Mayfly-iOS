@@ -28,5 +28,11 @@ class FirstViewController: NotificationsViewController, UITableViewDataSource, U
         var selectedEvent = self.notifications[eventIndex]
         eventViewController.event = selectedEvent
     }
+    
+    @IBAction func createEventOnClick(sender: AnyObject) {
+        let newEventViewController = self.storyboard.instantiateViewControllerWithIdentifier("NewEventViewController") as NewEventViewController
+        
+        self.navigationController.pushViewController(newEventViewController, animated: true)
+    }
 }
 

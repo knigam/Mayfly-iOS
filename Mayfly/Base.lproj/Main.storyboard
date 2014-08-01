@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
     </dependencies>
     <scenes>
-        <!--Notifications-->
+        <!--Events-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Mayfly" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,7 +41,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="mhz-Pv-kfM" kind="show" id="qmU-ES-2Rb"/>
+                                            <segue destination="mhz-Pv-kfM" kind="show" identifier="" id="qmU-ES-2Rb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -53,13 +53,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="NyG-MC-9Gg" secondAttribute="trailing" id="Lx7-SQ-BN9"/>
-                            <constraint firstItem="NyG-MC-9Gg" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="VR2-pg-Xhh"/>
-                            <constraint firstItem="NyG-MC-9Gg" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="b0d-Kl-5Ua"/>
-                            <constraint firstAttribute="bottom" secondItem="NyG-MC-9Gg" secondAttribute="bottom" id="x7j-s1-Erz"/>
+                            <constraint firstAttribute="bottom" secondItem="NyG-MC-9Gg" secondAttribute="bottom" id="F49-Lt-Emf"/>
+                            <constraint firstAttribute="trailing" secondItem="NyG-MC-9Gg" secondAttribute="trailing" id="Ug8-s9-aof"/>
+                            <constraint firstItem="NyG-MC-9Gg" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="Xcq-Ew-awk"/>
+                            <constraint firstItem="NyG-MC-9Gg" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="Xhw-bl-W9w"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Notifications" id="KNc-MG-v4b"/>
+                    <navigationItem key="navigationItem" title="Events" id="KNc-MG-v4b">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="KTB-kL-862">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gJp-zH-38a">
+                                <rect key="frame" x="-23" y="-15" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createEventOnClick:" destination="9pv-A4-QxB" eventType="touchUpInside" id="81l-Tk-UjS"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="eventTableView" destination="NyG-MC-9Gg" id="8Gh-bv-fTi"/>
                     </connections>
@@ -229,6 +242,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="REw-WM-Lfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2088" y="149"/>
+        </scene>
+        <!--New Event-->
+        <scene sceneID="tM8-JR-GEc">
+            <objects>
+                <viewController storyboardIdentifier="NewEventViewController" title="New Event" id="omU-5h-qoO" customClass="NewEventViewController" customModule="Mayfly" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KQR-v6-wjg"/>
+                        <viewControllerLayoutGuide type="bottom" id="nkW-3r-hcb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tlz-XU-yjE">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sxh-rk-2dF">
+                                <rect key="frame" x="20" y="82" width="440" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Sxh-rk-2dF" secondAttribute="trailing" constant="20" symbolic="YES" id="0Of-ZL-X9F"/>
+                            <constraint firstItem="Sxh-rk-2dF" firstAttribute="top" secondItem="KQR-v6-wjg" secondAttribute="bottom" constant="18" id="1P3-yQ-ve5"/>
+                            <constraint firstItem="Sxh-rk-2dF" firstAttribute="leading" secondItem="Tlz-XU-yjE" secondAttribute="leading" constant="20" symbolic="YES" id="3rB-6z-hfV"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mnq-DC-wRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2088" y="-403"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -445,7 +489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCA-Hf-UYu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2956" y="671"/>
+            <point key="canvasLocation" x="2088" y="739"/>
         </scene>
         <!--First-->
         <scene sceneID="2Ve-hb-PXd">
@@ -511,6 +555,6 @@
         <image name="third" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VrE-6g-wva"/>
+        <segue reference="qmU-ES-2Rb"/>
     </inferredMetricsTieBreakers>
 </document>

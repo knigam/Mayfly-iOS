@@ -12,6 +12,7 @@
 		55383A1B19837ABA0062F677 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55383A1A19837ABA0062F677 /* EventModel.swift */; };
 		55383A1D19837AE00062F677 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55383A1C19837AE00062F677 /* FriendModel.swift */; };
 		55383A1F1984CCB80062F677 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55383A1E1984CCB80062F677 /* NotificationsViewController.swift */; };
+		5538EF41198B5E1A00D6E78E /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5538EF40198B5E1A00D6E78E /* NewEventViewController.swift */; };
 		55D4455F197C6FE500DB504B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4455E197C6FE500DB504B /* LoginViewController.swift */; };
 		55E070A0197B7D8B000C46EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E0709F197B7D8B000C46EC /* AppDelegate.swift */; };
 		55E070A2197B7D8B000C46EC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E070A1197B7D8B000C46EC /* FirstViewController.swift */; };
@@ -38,6 +39,7 @@
 		55383A1A19837ABA0062F677 /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		55383A1C19837AE00062F677 /* FriendModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		55383A1E1984CCB80062F677 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		5538EF40198B5E1A00D6E78E /* NewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
 		55D4455E197C6FE500DB504B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		55E0709A197B7D8B000C46EC /* Mayfly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mayfly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E0709E197B7D8B000C46EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				55383A161983741E0062F677 /* EventViewController.swift */,
 				55383A18198375A80062F677 /* FriendsViewController.swift */,
 				55383A1E1984CCB80062F677 /* NotificationsViewController.swift */,
+				5538EF40198B5E1A00D6E78E /* NewEventViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			files = (
 				55E070A4197B7D8B000C46EC /* SecondViewController.swift in Sources */,
 				55E070A0197B7D8B000C46EC /* AppDelegate.swift in Sources */,
+				5538EF41198B5E1A00D6E78E /* NewEventViewController.swift in Sources */,
 				55E070BF197C6A0E000C46EC /* ThirdViewController.swift in Sources */,
 				55D4455F197C6FE500DB504B /* LoginViewController.swift in Sources */,
 				55383A1D19837AE00062F677 /* FriendModel.swift in Sources */,
