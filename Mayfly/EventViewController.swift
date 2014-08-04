@@ -41,4 +41,10 @@ class EventViewController: UIViewController {
     }
     @IBAction func onAttendingToggle(sender: AnyObject) {
     }
+    
+    @IBAction func inviteOnClick(sender: AnyObject) {
+        let inviteViewController = self.storyboard.instantiateViewControllerWithIdentifier("InviteViewController") as InviteViewController
+        
+        self.navigationController.pushViewController(inviteViewController, animated: true)
+    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550CEFF6198EFF8000F01DB5 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CEFF5198EFF8000F01DB5 /* InviteViewController.swift */; };
 		55383A171983741E0062F677 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55383A161983741E0062F677 /* EventViewController.swift */; };
 		55383A19198375A80062F677 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55383A18198375A80062F677 /* FriendsViewController.swift */; };
 		55383A1B19837ABA0062F677 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55383A1A19837ABA0062F677 /* EventModel.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		550CEFF5198EFF8000F01DB5 /* InviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
 		55383A161983741E0062F677 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		55383A18198375A80062F677 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		55383A1A19837ABA0062F677 /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				55383A18198375A80062F677 /* FriendsViewController.swift */,
 				55383A1E1984CCB80062F677 /* NotificationsViewController.swift */,
 				5538EF40198B5E1A00D6E78E /* NewEventViewController.swift */,
+				550CEFF5198EFF8000F01DB5 /* InviteViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				55E070A4197B7D8B000C46EC /* SecondViewController.swift in Sources */,
 				55E070A0197B7D8B000C46EC /* AppDelegate.swift in Sources */,
 				5538EF41198B5E1A00D6E78E /* NewEventViewController.swift in Sources */,
+				550CEFF6198EFF8000F01DB5 /* InviteViewController.swift in Sources */,
 				55E070BF197C6A0E000C46EC /* ThirdViewController.swift in Sources */,
 				55D4455F197C6FE500DB504B /* LoginViewController.swift in Sources */,
 				55383A1D19837AE00062F677 /* FriendModel.swift in Sources */,
