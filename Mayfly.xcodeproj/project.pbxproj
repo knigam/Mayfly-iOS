@@ -22,6 +22,7 @@
 		55E070A9197B7D8B000C46EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55E070A8197B7D8B000C46EC /* Images.xcassets */; };
 		55E070B5197B7D8B000C46EC /* MayflyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E070B4197B7D8B000C46EC /* MayflyTests.swift */; };
 		55E070BF197C6A0E000C46EC /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E070BE197C6A0E000C46EC /* ThirdViewController.swift */; };
+		B75602A7198F15E70099D30E /* HttpHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75602A6198F15E70099D30E /* HttpHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		55E070B3197B7D8B000C46EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55E070B4197B7D8B000C46EC /* MayflyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MayflyTests.swift; sourceTree = "<group>"; };
 		55E070BE197C6A0E000C46EC /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		B75602A6198F15E70099D30E /* HttpHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		55E0709C197B7D8B000C46EC /* Mayfly */ = {
 			isa = PBXGroup;
 			children = (
+				B75602A5198F15D20099D30E /* Helper */,
 				55383A15198373F80062F677 /* Models */,
 				55383A14198373D70062F677 /* Controllers */,
 				55E0709F197B7D8B000C46EC /* AppDelegate.swift */,
@@ -153,6 +156,14 @@
 				55E070B3197B7D8B000C46EC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B75602A5198F15D20099D30E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B75602A6198F15E70099D30E /* HttpHelper.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +276,7 @@
 				55383A19198375A80062F677 /* FriendsViewController.swift in Sources */,
 				55E070A2197B7D8B000C46EC /* FirstViewController.swift in Sources */,
 				55383A1B19837ABA0062F677 /* EventModel.swift in Sources */,
+				B75602A7198F15E70099D30E /* HttpHelper.swift in Sources */,
 				55383A171983741E0062F677 /* EventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
