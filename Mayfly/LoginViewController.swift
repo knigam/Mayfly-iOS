@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, HTTPHelperDelegate {
     
     //Controller Variables
     var createNewAccount :Bool = false
@@ -66,8 +66,15 @@ class LoginViewController: UIViewController {
     //This is the button listener that either logs the user in or creates an account
     @IBAction func loginBtnOnClick(sender: AnyObject) {
         if validateLabels(){
-            let tabBarController = self.storyboard.instantiateViewControllerWithIdentifier("tabBarController") as UIViewController
-            self.presentViewController(tabBarController, animated: true, completion: nil)
+            var uri :String = "http://staging.mymayfly.com/users/sign_in.json"
+            var loginData: [String: AnyObject] = ["email": self.usernameTextField.text, "password": self.passwordTextField.text]
+            if createNewAccount {
+                uri = "http://staging.mymayfly.com/users.json"
+                loginData["password_confirmation"] = self.passwordConfirmationTextField.text
+                loginData["name"] = self.nameTextField.text
+            }
+            let data: [String: AnyObject] = ["user": loginData]
+            HTTPHelper.httpPostJSON(uri, data: data, delegate: self)
         }
     }
     
@@ -115,5 +122,20 @@ class LoginViewController: UIViewController {
             alert.show()
         }
         return cont
+    }
+    
+    func didReceiveHTTPResponseResults(results: NSDictionary) {
+        if(results["success"] as Bool){
+            let tabBarController = self.storyboard.instantiateViewControllerWithIdentifier("tabBarController") as UIViewController
+            self.presentViewController(tabBarController, animated: true, completion: nil)
+        }
+        else {
+            let error :String = results["message"] as String
+            var alert: UIAlertView = UIAlertView()
+            alert.title = "Login error"
+            alert.message = error
+            alert.addButtonWithTitle("Ok")
+            alert.show()
+        }
     }
 }

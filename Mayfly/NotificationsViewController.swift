@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotificationsViewController: UIViewController {
+class NotificationsViewController: UIViewController, HTTPHelperDelegate {
     
     let kCellIdentifier: String = "EventNotificationCell"
     
@@ -46,11 +46,18 @@ class NotificationsViewController: UIViewController {
     
     //Use this method to get the events from the JSON and create event models for the notifications array
     func populateNotifications() {
-        if notifications.isEmpty{
-            for i in Range(start: 0, end: 10) {
-            let newEvent = EventModel(id: 1, name: "Test Event \(i)", eventDescription: "This is a test event \(i)", startTime: "1:00 AM", endTime: "2:00 PM", location: "80 Lafayette St.", min: 0, max: 1, attending: true, creator: true, open: true, active: true, usersAttending: [1:"Kushal"])
-            self.notifications.append(newEvent)
-            }
+        let uri: String = "http://staging.mymayfly.com/events.json"
+        HTTPHelper.httpGet(uri, delegate: self)
+    }
+    
+    func didReceiveHTTPResponseResults(results: NSDictionary) {
+        notifications = []
+        for n in results["events"] as [AnyObject]{
+            let event: EventModel = EventModel(id: (n["id"] as Int))
+            event.name = n["name"] as String
+            event.attending = n["attending"] as Bool
+            event.creator = n["creator"] as Bool
+            self.notifications.append(event)
         }
     }
 }

@@ -16,7 +16,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
+        
+        application.registerForRemoteNotificationTypes( UIRemoteNotificationType.Badge |
+            UIRemoteNotificationType.Sound |
+            UIRemoteNotificationType.Alert )
+        
+        //Decide which view controller to start with based on saved information
+        
         return true
+    }
+    
+    func application( application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData ) {
+        
+        //This happens after successfully registering
+        var characterSet: NSCharacterSet = NSCharacterSet( charactersInString: "<>" )
+        
+        var deviceTokenString: String = ( deviceToken.description as NSString )
+            .stringByTrimmingCharactersInSet( characterSet )
+            .stringByReplacingOccurrencesOfString( " ", withString: "" ) as String
+        
+        println( deviceTokenString )
+        
+    }
+    
+    func application( application: UIApplication, didFailToRegisterForRemoteNotificationsWithError deviceToken: NSData ) {
+        
+        //This happens if registration process failed
+        println( "failed to register device" )
+        
     }
 
     func applicationWillResignActive(application: UIApplication!) {
