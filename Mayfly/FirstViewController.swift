@@ -34,5 +34,22 @@ class FirstViewController: NotificationsViewController, UITableViewDataSource, U
         
         self.navigationController.pushViewController(newEventViewController, animated: true)
     }
+    
+    override func populateNotifications() {
+        let uri: String = "http://staging.mymayfly.com/events.json"
+        HTTPHelper.httpGet(uri, delegate: self)
+    }
+    
+    override func didReceiveHTTPResponseResults(results: NSDictionary) {
+        notifications = []
+        for n in results["events"] as [[String: AnyObject]]{
+            let event: EventModel = EventModel(id: n["id"] as AnyObject? as Int)
+            event.name = n["name"] as AnyObject? as String
+            event.attending = n["attending"] as AnyObject? as Bool
+            event.creator = n["creator"] as AnyObject? as Bool
+            self.notifications.append(event)
+        }
+        self.eventTableView.reloadData()
+    }
 }
 

@@ -52,11 +52,11 @@ class NotificationsViewController: UIViewController, HTTPHelperDelegate {
     
     func didReceiveHTTPResponseResults(results: NSDictionary) {
         notifications = []
-        for n in results["events"] as [AnyObject]{
-            let event: EventModel = EventModel(id: (n["id"] as Int))
-            event.name = n["name"] as String
-            event.attending = n["attending"] as Bool
-            event.creator = n["creator"] as Bool
+        for n in results["events"] as [[String: AnyObject]]{
+            let event: EventModel = EventModel(id: n["id"] as AnyObject? as Int)
+            event.name = n["name"] as AnyObject? as String
+            event.attending = n["attending"] as AnyObject? as Bool
+            event.creator = n["creator"] as AnyObject? as Bool
             self.notifications.append(event)
         }
     }
